@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Services - Amtute</title>
+    <link rel="shortcut icon" href="images/Amtute__2_-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-800 h-screen w-screen overflow-x-hidden flex flex-col">
+    <!-- Navigation Bar -->
+   <%- include('nav.ejs')%>
+
+    <hr class="border-gray-700">
+
+    <!-- Main Content -->
+    <main class="flex-grow px-8 sm:px-4 mt-10">
+        <h1 class="text-white text-4xl sm:text-2xl font-bold text-center mb-8">Our Services</h1>
+        <p class="text-gray-400 text-lg sm:text-sm text-center mb-10">
+            Discover the range of services Amtute offers to help students excel academically and beyond.
+        </p>
+
+        <section class="grid grid-cols-3 sm:grid-cols-1 gap-8">
+            <!-- Service 1 -->
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 text-center">
+                <h2 class="text-blue-400 text-2xl font-bold mb-4">One-on-One Sessions</h2>
+                <p class="text-gray-300 text-lg sm:text-sm">
+                    Personalized attention tailored to individual learning needs for maximum results.
+                </p>
+            </div>
+
+            <!-- Service 2 -->
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 text-center">
+                <h2 class="text-blue-400 text-2xl font-bold mb-4">Flexible Schedules</h2>
+                <p class="text-gray-300 text-lg sm:text-sm">
+                    Learn at your convenience with our flexible timing options designed to fit your busy schedule.
+                </p>
+            </div>
+
+            <!-- Service 3 -->
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 text-center">
+                <h2 class="text-blue-400 text-2xl font-bold mb-4">Extracurricular Activities</h2>
+                <p class="text-gray-300 text-lg sm:text-sm">
+                    Engage in fun and educational extracurricular activities for both students and parents.
+                </p>
+            </div>
+
+            <!-- Service 4 -->
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 text-center">
+                <h2 class="text-blue-400 text-2xl font-bold mb-4">Teachers from Across India</h2>
+                <p class="text-gray-300 text-lg sm:text-sm">
+                    Learn from experienced educators from all over India with diverse teaching methods and expertise.
+                </p>
+            </div>
+
+            <!-- Service 5 -->
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 text-center">
+                <h2 class="text-blue-400 text-2xl font-bold mb-4">Comprehensive Curriculum</h2>
+                <p class="text-gray-300 text-lg sm:text-sm">
+                    Access a well-rounded curriculum designed to cater to students' academic and personal development.
+                </p>
+            </div>
+
+            <!-- Service 6 -->
+            <div class="bg-zinc-900 rounded-lg shadow-lg p-6 text-center">
+                <h2 class="text-blue-400 text-2xl font-bold mb-4">Support for Parents</h2>
+                <p class="text-gray-300 text-lg sm:text-sm">
+                    Workshops and guidance to help parents support their children’s learning journey.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <%- include('footer.ejs')%>
+    </footer>
+</body>
+</html>

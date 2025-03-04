@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonials - Amtute</title>
+    <link rel="shortcut icon" href="images/Amtute__2_-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-800 w-screen overflow-x-hidden flex flex-col">
+    <!-- Navigation Bar -->
+    <%- include('nav.ejs') %>
+    <hr class="border-gray-700">
+
+    <!-- Main Content -->
+    <main class="flex-grow px-8 sm:px-4 mt-10">
+        <h1 class="text-center text-white text-5xl sm:text-3xl font-bold mb-10">What Our Clients Say</h1>
+        
+        <section class="grid grid-cols-3 gap-8 sm:grid-cols-1">
+            <!-- Testimonial 1 -->
+            <div class="bg-zinc-900 p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300 max-w-full">
+                <p class="text-white text-lg italic">"Amtute has been a game-changer for my child's education. The tutors are knowledgeable, patient, and passionate about teaching."</p>
+                <h3 class="text-yellow-400 text-xl font-bold mt-4">- Sarah M.</h3>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="bg-zinc-900 p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300 max-w-full">
+                <p class="text-white text-lg italic">"Flexible schedules and personalized learning have made all the difference for my family. Highly recommended!"</p>
+                <h3 class="text-yellow-400 text-xl font-bold mt-4">- John D.</h3>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <% reviews.forEach((rev) => { %>
+                <div class="bg-zinc-900 p-6 rounded-lg shadow-lg transform hover:scale-105 hover:shadow-2xl transition duration-300 max-w-full">
+                    <p class="text-white text-lg italic"><%= rev.review %></p>
+                    <h3 class="text-yellow-400 text-xl font-bold mt-4">- <%= rev.name %></h3>
+                </div>
+            <% }) %>
+            
+        </section>
+
+        <!-- Review Submission Form -->
+        <section class="bg-zinc-900 p-8 mt-10 rounded-lg shadow-lg max-w-3xl mx-auto ">
+            <h2 class="text-white text-3xl sm:text-2xl font-bold mb-5 text-center">Submit Your Review</h2>
+            <form action="/submit-review" method="POST" class="flex flex-col gap-5">
+                <input 
+                    type="text" 
+                    name="name" 
+                    placeholder="Your Name" 
+                    class="bg-zinc-800 text-white p-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    required>
+                
+                <textarea 
+                    name="review" 
+                    rows="5" 
+                    placeholder="Write your review here..." 
+                    class="bg-zinc-800 resize-none text-white p-4 rounded-md shadow focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                    required></textarea>
+                
+                <button 
+                    type="submit" 
+                    class="bg-yellow-400 text-zinc-900 font-bold py-3 px-6 rounded-md shadow-lg hover:bg-yellow-500 transition duration-300">
+                    Submit Review
+                </button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <%- include('footer.ejs') %>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+</html>

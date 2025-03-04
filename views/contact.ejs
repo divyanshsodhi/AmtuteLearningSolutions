@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get In Touch - Amtute</title>
+    <link rel="shortcut icon" href="images/Amtute__2_-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-800 h-screen w-screen overflow-x-hidden flex flex-col">
+    <!-- Navigation Bar -->
+    <%- include("nav.ejs")%>
+
+    <hr class="border-gray-700">
+
+    <!-- Main Content -->
+    <main class="flex-grow px-8 sm:px-4 mt-10 flex justify-center items-center">
+        <section class="bg-zinc-900 rounded-lg shadow-lg p-10 sm:p-6 w-[50%] sm:w-full max-w-full">
+            <h1 class="text-white text-4xl sm:text-2xl font-bold text-center mb-6">Get In Touch With Us..</h1>
+            <p class="text-gray-400 text-lg sm:text-sm text-center mb-8">We'd love to hear from you! Fill out the form below and we'll get back to you shortly.</p>
+
+            <form action="/submitDb" method="POST" class="space-y-6">
+                <!-- Name -->
+                <div>
+                    <label for="name" class="block text-white text-lg sm:text-sm mb-2">Name</label>
+                    <input type="text" id="name" name="name" required placeholder="Your Full Name"
+                        class="w-full p-3 rounded-lg bg-zinc-800 text-white border border-gray-700 focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+
+                <!-- Email -->
+                <div>
+                    <label for="email" class="block text-white text-lg sm:text-sm mb-2">Email</label>
+                    <input type="email" id="email" name="email" required placeholder="Your Email Address"
+                        class="w-full p-3 rounded-lg bg-zinc-800 text-white border border-gray-700 focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+
+                <!-- Phone -->
+                <div>
+                    <label for="phone" class="block text-white text-lg sm:text-sm mb-2">Phone Number</label>
+                    <input type="tel" id="phone" name="phone" required placeholder="Your Phone Number"
+                        class="w-full p-3 rounded-lg bg-zinc-800 text-white border border-gray-700 focus:outline-none focus:ring focus:ring-blue-500">
+                </div>
+
+                <!-- Message -->
+                <div>
+                    <label for="Country You Belong To" class="block text-white text-lg sm:text-sm mb-2">Country</label>
+                    <input type="text" id="country" name="country" rows="4" required placeholder="Country"
+                        class="w-full p-3 rounded-lg bg-zinc-800 text-white border border-gray-700 focus:outline-none focus:ring focus:ring-blue-500"></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="flex justify-center">
+                    <button id= "submit" type="submit"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold text-lg sm:text-sm hover:bg-blue-700 focus:ring focus:ring-blue-500">
+                        Submit Details
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <%- include('footer.ejs')%>
+    </footer>
+   
+</body>
+</html>

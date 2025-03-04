@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Amtute</title>
+    <link rel="shortcut icon" href="images/Amtute__2_-removebg-preview.png" type="image/x-icon">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-zinc-800 h-screen w-screen overflow-x-hidden flex flex-col">
+    <!-- Navigation Bar -->
+    <%- include('nav.ejs')%>
+    <hr class="border-gray-700">
+
+    <!-- Main Content -->
+    <main class="flex-grow px-8 sm:px-4 mt-10">
+        <h1 class="text-white text-4xl sm:text-2xl font-bold text-center mb-8">About Us</h1>
+        <p class="text-gray-400 text-lg sm:text-sm text-center mb-10">
+            Empowering students worldwide through personalized online education.
+        </p>
+
+        <section class="flex flex-wrap justify-between items-center">
+            <!-- Image Section -->
+            <div class="w-1/2 sm:w-full mb-8">
+                <img src="images\60e933395aef48f2a3e77d7962aa7ec4.jpeg" class="h-50 rounded-lg shadow-lg w-full" alt="About Us Image">
+            </div>
+
+            <!-- Text Section -->
+            <div class="w-1/2 sm:w-full text-gray-300">
+                <h2 class="text-blue-400 text-3xl sm:text-xl font-bold mb-6">Who We Are</h2>
+                <p class="mb-6">
+                    At <strong>Amtute</strong>, we believe in nurturing young minds through world-class online education. 
+                    With a team of experienced educators from across India, we provide a wide range of academic and extracurricular services 
+                    to cater to the diverse needs of students around the globe. Our mission is to bridge the gap between 
+                    traditional learning and modern technology, making education accessible and effective for every child.
+                </p>
+                <h2 class="text-blue-400 text-3xl sm:text-xl font-bold mb-6">Why Choose Us?</h2>
+                <ul class="list-disc ml-6">
+                    <li class="mb-4">
+                        <strong>Experienced Educators:</strong> Our team comprises qualified teachers from all over India, 
+                        bringing a wealth of knowledge and expertise.
+                    </li>
+                    <li class="mb-4">
+                        <strong>Personalized Learning:</strong> Every student is unique. We create tailored learning plans to 
+                        meet their specific goals and abilities.
+                    </li>
+                    <li class="mb-4">
+                        <strong>Flexible Schedules:</strong> We work around your child’s schedule, ensuring a stress-free 
+                        learning experience.
+                    </li>
+                    <li class="mb-4">
+                        <strong>Global Accessibility:</strong> Whether you're in the US, UK, or Australia, Amtute brings 
+                        quality education to your doorstep.
+                    </li>
+                    <li>
+                        <strong>Beyond Academics:</strong> We focus on holistic development, offering extracurricular 
+                        activities to keep students engaged and inspired.
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <%- include('footer.ejs')%>
+    </footer>
+</body>
+</html>
